@@ -2,15 +2,20 @@ package dev.ocaina.stockflowapi.entity;
 
 import jakarta.persistence.*;
 
+@Table(name= "stock_movement")
 @Entity
-public class StockMoviment{
+public class StockMovement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private MovimentType type;
+    private MovementType type;
+
+    @Column(nullable = false)
     private int quantity;
+
+    @Column(nullable = false)
     private String reason;
 
     @ManyToOne

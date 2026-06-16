@@ -1,6 +1,6 @@
 package dev.ocaina.stockflowapi.entity;
 
-public enum MovimentType {
+public enum MovementType {
     ENTRY,
     EXIT
 }
