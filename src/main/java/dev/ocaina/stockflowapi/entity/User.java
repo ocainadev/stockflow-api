@@ -1,9 +1,9 @@
 package dev.ocaina.stockflowapi.entity;
 
+import dev.ocaina.stockflowapi.models.BaseEntity;
+import dev.ocaina.stockflowapi.models.UserRole;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.time.LocalDateTime;
 
 @Table(name= "users")
 @Getter
@@ -12,10 +12,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 @Entity
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class User extends BaseEntity {
 
     private String name;
 
@@ -27,5 +24,4 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
-    private LocalDateTime createdAt;
 }

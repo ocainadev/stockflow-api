@@ -4,14 +4,13 @@ import dev.ocaina.stockflowapi.dto.LoginRequest;
 import dev.ocaina.stockflowapi.dto.LoginResponse;
 import dev.ocaina.stockflowapi.dto.RegisterRequest;
 import dev.ocaina.stockflowapi.entity.User;
-import dev.ocaina.stockflowapi.entity.UserRole;
+import dev.ocaina.stockflowapi.models.UserRole;
 import dev.ocaina.stockflowapi.exception.BusinessException;
 import dev.ocaina.stockflowapi.repository.UserRepository;
 import dev.ocaina.stockflowapi.security.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import java.time.LocalDateTime;
 
 @Service
 @RequiredArgsConstructor
@@ -31,7 +30,6 @@ public class AuthService {
                 .email(request.email())
                 .passwordHash(passwordEncoder.encode(request.password()))
                 .role(UserRole.USER)
-                .createdAt(LocalDateTime.now())
                 .build();
 
         userRepository.save(user);

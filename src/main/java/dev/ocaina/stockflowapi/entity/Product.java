@@ -1,5 +1,6 @@
 package dev.ocaina.stockflowapi.entity;
 
+import dev.ocaina.stockflowapi.models.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,11 +13,7 @@ import java.math.BigDecimal;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Product extends BaseEntity {
 
     @Column(nullable = false)
     private String name;

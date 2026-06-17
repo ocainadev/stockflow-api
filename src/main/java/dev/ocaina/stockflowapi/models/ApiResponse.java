@@ -1,4 +1,4 @@
-package dev.ocaina.stockflowapi.entity;
+package dev.ocaina.stockflowapi.models;
 
 
 import lombok.AllArgsConstructor;

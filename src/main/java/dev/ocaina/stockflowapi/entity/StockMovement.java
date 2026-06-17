@@ -1,14 +1,12 @@
 package dev.ocaina.stockflowapi.entity;
 
+import dev.ocaina.stockflowapi.models.BaseEntity;
+import dev.ocaina.stockflowapi.models.MovementType;
 import jakarta.persistence.*;
 
 @Table(name= "stock_movement")
 @Entity
-public class StockMovement {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class StockMovement extends BaseEntity {
 
     private MovementType type;
 

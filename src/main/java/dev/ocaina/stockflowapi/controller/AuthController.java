@@ -3,7 +3,7 @@ package dev.ocaina.stockflowapi.controller;
 import dev.ocaina.stockflowapi.dto.LoginRequest;
 import dev.ocaina.stockflowapi.dto.LoginResponse;
 import dev.ocaina.stockflowapi.dto.RegisterRequest;
-import dev.ocaina.stockflowapi.entity.ApiResponse;
+import dev.ocaina.stockflowapi.models.ApiResponse;
 import dev.ocaina.stockflowapi.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
